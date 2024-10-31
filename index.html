@@ -145,16 +145,29 @@ Thx for your visit.
   </main>
 
   <footer>
-    <form id="form">
+    <form id="form" onsubmit="send(); reset(); return false">
       <p>Message me</p>
 
-      <input type="text" placeholder="Name" required name="Name">
-      <input type="tel" placeholder="Contact no" name="Contact no">
-      <input type="email" placeholder="Email" required name="Email">
-      <textarea name="Message" id="" cols="30" rows="10" placeholder="How can I help you?"></textarea>
+      <input type="text" id="foname" placeholder="Name" required name="Name">
+      <input type="tel" id="contactno" placeholder="Contact no" name="Contact no">
+      <input type="email" placeholder="Email" required name="Email" id="foemailid">
+      <textarea name="Message" id="fomessage" cols="30" rows="10" placeholder="How can I help you?"></textarea>
       <button type="submit"><i class="fa-solid fa-paper-plane"></i>Send the message</button>
     </form>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function send(){
+  Email.send({
+    SecureToken: '1274d7b2-5cee-4e09-9624-d9088cc56c1b',
+    To: 'herosiddharthspck@gmail.com',
+    From: 'bhartisinghrajputani@gmail.com',
+    Subject: "This is the subject of ggg",
+    Body: "name: " + document.getElementById('foname').value + "<br>Contact no: " + document.getElementById('contactno').value + "Email id: " + document.getElementById('foemailid').value + "Message: " +  document.getElementById('fomessage').value 
+  }).then(
+    message => alert('sent')
+  );
+}
+</script>
 
     <div id="contact">
             <p class="b">You can contact me on my following handles ↓↓↓</p>
