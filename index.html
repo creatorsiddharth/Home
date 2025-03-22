@@ -166,11 +166,11 @@
       <p>Message me</p>
       
       <input type="text" id="foname" placeholder="Name" required name="Name" class="fo_input">
-      <input type="tel" id="contactno" placeholder="Contact no" name="Contact no" class="fo_input">
-      <input type="email" placeholder="Email" required name="Email" id="foemailid" class="fo_input">
+      <input type="tel" id="contactno" placeholder="Contact no" name="Contact no" class="fo_input" required>
+      <input type="email" placeholder="Email"  name="Email" id="foemailid" class="fo_input">
       <input type="text" placeholder="Subject of email(question)" required name="Subject" class="fo_input">
       
-      <textarea name="Message" id="fomessage" cols="30" rows="10" placeholder="How can I help you?" class="fo_input"></textarea>
+      <textarea name="Message" id="fomessage" cols="30" rows="10" placeholder="How can I help you?" class="fo_input" required></textarea>
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> <a>Send the message</a></button>
     </form>
     <! cript src="https://smtpjs.com/v3/smtp.js">

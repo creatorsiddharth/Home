@@ -180,6 +180,12 @@ var sentbutton = document.querySelector('form button a');
 var forminputs = Array.from(document.getElementsByClassName('fo_input'));
 forminputs.forEach((e) => {
   e.addEventListener('change', () => {
-    sentbutton.setAttribute('href', 'mailto:herosiddharthspck@gmail.com?subject=' + forminputs[3].value + '&body=' + '*NAME:  ' + forminputs[0].value + '%0D%0A' + '*CONTACT NO:  ' + forminputs[1].value + '%0D%0A' + '*EMAIL ID: ' + forminputs[2].value + '%0D%0A' + '*MESSAGE: ' + forminputs[4].value + '%0D%0A%0D%0A.%0D%0A THIS IS FROM HOMEPAGE --Sid--GITHUB')
+    if (forminputs[0].value.trim()!='' && forminputs[1].value.trim()!='' && forminputs[3].value.trim()!='' && forminputs[4].value.trim()!='') {
+      sentbutton.setAttribute('href', 'mailto:herosiddharthspck@gmail.com?subject=' + forminputs[3].value + '&body=' + '*NAME:  ' + forminputs[0].value + '%0D%0A%0D%0A' + '*CONTACT NO:  ' + forminputs[1].value + '%0D%0A%0D%0A' + '*EMAIL ID: ' + forminputs[2].value + '%0D%0A%0D%0A' + '*MESSAGE: ' + forminputs[4].value + '%0D%0A%0D%0A.%0D%0A **THIS IS VIA HOMEPAGE--Sid--GITHUB**')
+    }
+        else{
+          sentbutton.removeAttribute('href')
+        }
+    
   })
 })
