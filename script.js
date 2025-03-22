@@ -1,5 +1,3 @@
-
-
 //making navbar colourful on scrolling 
 //making navbar colourful on scrolling 
 //making navbar colourful on scrolling 
@@ -19,16 +17,16 @@ window.addEventListener('scroll', () => {
 
 
 
-//making scrool to services on clicking services shortcut button 
-//making scrool to services on clicking services shortcut button 
-//making scrool to services on clicking services shortcut button 
+//making scrool to projects on clicking projects shortcut button 
+//making scrool to projects on clicking projects shortcut button 
+//making scrool to projects on clicking projects shortcut button 
 
-var se_short = document.getElementById('se_short')
+var prj_short = document.getElementById('prj_short')
 
-se_short.addEventListener('click', () => {
-
-  window.scrollTo(1, document.getElementById('service').offsetTop - navbar.offsetHeight)
-
+prj_short.addEventListener('click', () => {
+  
+  window.scrollTo(1, document.getElementById('project').offsetTop - navbar.offsetHeight)
+  
 })
 
 
@@ -45,34 +43,34 @@ var nav = document.querySelector('nav');
 var nav_num = 1;
 
 bar.addEventListener('click', () => {
-
+  
   if (nav_num == 1) {
-
+    
     // nav down
     nav.style = 'transform: translateY(50vh); transition: .5s;';
-
+    
     // bar rotation 
     bar.style = 'transform: rotate(450deg); transition:.5s';
-
-    // service shortcut disappear 
-    se_short.style = 'display:none'
-
+    
+    // project shortcut disappear 
+    prj_short.style = 'display:none'
+    
     nav_num = 2;
   }
   else {
-
+    
     // nav up
     nav.style = 'transform: translateY(0vh); transition: .5s';
-
+    
     // bar rotation 
     bar.style = 'transform: rotate(0deg); transition:.5s';
-
-    //service shortcut reappear 
-    se_short.style = 'display:block'
-
+    
+    //project shortcut reappear 
+    prj_short.style = 'display:block'
+    
     nav_num = 1;
   }
-
+  
 })
 
 
@@ -89,20 +87,20 @@ var image = document.getElementById('ph1');
 
 buttons.forEach((e) => {
   e.addEventListener('click', () => {
-
+    
     // adding animation class to photoframe
     image.classList.add('ph_ani')
-
+    
     // changing photo while animation with delay
     setTimeout(() => {
       image.style = 'background: url("' + e.value + '"); background-size: cover;'
     }, 250)
-
+    
     // removing animation class after animation 
     setTimeout(() => {
       image.classList.remove('ph_ani')
     }, 500)
-
+    
   })
 })
 
@@ -120,24 +118,24 @@ var nav_child = Array.from(document.querySelectorAll('nav>button'));
 
 nav_child.forEach((l) => {
   l.addEventListener('click', () => {
-
+    
     // nav up
     nav.style = 'transform: translateY(0vh); transition: .5s';
     nav_num = 1;
-
+    
     //bar rotation 
     bar.style = 'transform: rotate(0deg); transition:.5s';
-
-    // service shortcut reappear 
-    se_short.style = 'display:block'
-
+    
+    // project shortcut reappear 
+    prj_short.style = 'display:block'
+    
     // scrolling to section on clicking respective navigational button 
     let box = document.getElementById(l.value)
-
+    
     window.scrollTo(1, box.offsetTop - navbar.offsetHeight)
-
+    
   })
-
+  
 })
 
 
@@ -148,32 +146,40 @@ nav_child.forEach((l) => {
 var col_changer = Array.from(document.querySelectorAll('nav div input'));
 
 col_changer.forEach((u) => {
-
-u.addEventListener('change',(f)=>{
   
-    if (f.target.checked) {
-    document.documentElement.style.setProperty('--co', u.value);
+  u.addEventListener('change', (f) => {
     
-     // nav up
-   nav.style = 'transform: translateY(0vh); transition: .5s';
-    nav_num = 1;
-
-    //bar rotation 
-    bar.style = 'transform: rotate(0deg); transition:.5s';
-
-    // service shortcut reappear 
-    se_short.style = 'display:block'
-  } 
-
-})
-
-})
-
-var se_contact = document.getElementById('se_contact')
-var contact = document.getElementById('contact')
-se_contact.addEventListener('click',()=>{
-    window.scrollTo(1, contact.offsetTop - navbar.offsetHeight)
-
+    if (f.target.checked) {
+      document.documentElement.style.setProperty('--co', u.value);
+      
+      // nav up
+      nav.style = 'transform: translateY(0vh); transition: .5s';
+      nav_num = 1;
+      
+      //bar rotation 
+      bar.style = 'transform: rotate(0deg); transition:.5s';
+      
+      // project shortcut reappear 
+      prj_short.style = 'display:block'
+    }
+    
+  })
+  
 })
 
 
+
+
+
+// action on clicking send email button
+// action on clicking send email button
+// action on clicking send email button
+
+
+var sentbutton = document.querySelector('form button a');
+var forminputs = Array.from(document.getElementsByClassName('fo_input'));
+forminputs.forEach((e) => {
+  e.addEventListener('change', () => {
+    sentbutton.setAttribute('href', 'mailto:herosiddharthspck@gmail.com?subject=' + forminputs[3].value + '&body=' + '*NAME:  ' + forminputs[0].value + '%0D%0A' + '*CONTACT NO:  ' + forminputs[1].value + '%0D%0A' + '*EMAIL ID: ' + forminputs[2].value + '%0D%0A' + '*MESSAGE: ' + forminputs[4].value + '%0D%0A%0D%0A.%0D%0A THIS IS FROM HOMEPAGE --Sid--GITHUB')
+  })
+})
