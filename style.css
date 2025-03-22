@@ -8,7 +8,7 @@
 }
 
 :root {
-  --co: royalblue;
+  --co: red;
 }
 
 html {
@@ -960,15 +960,11 @@ form textarea {
   outline: none;
 }
 
-form input:focus {
+form input:focus, form textarea:focus{
   background: #4545454A;
   color: var(--co)
 }
 
-form textarea:focus {
-  background: #4545454A;
-  
-}
 
 form textarea {
   height: 30rem;
