@@ -141,6 +141,9 @@ nav_child.forEach((l) => {
 
 
 
+//action on clicking bgcolor changer buttons
+//action on clicking bgcolor changer buttons
+//action on clicking bgcolor changer buttons
 
 
 var col_changer = Array.from(document.querySelectorAll('nav div input'));
@@ -150,6 +153,8 @@ col_changer.forEach((u) => {
   u.addEventListener('change', (f) => {
     
     if (f.target.checked) {
+      
+      // css variable value changer
       document.documentElement.style.setProperty('--co', u.value);
       
       // nav up

@@ -21,7 +21,9 @@ body {
   width: 100vw;
 }
 
-
+a{
+  text-decoration: none
+}
 
 
 
@@ -251,7 +253,6 @@ header #head #head_content button {
 
 header #head #head_content button a {
   color: white;
-  text-decoration: none;
 }
 
 header #head #head_content button i {
@@ -653,7 +654,6 @@ main {
   width: 100vw;
   -webkit-text-stroke: .3rem var(--co);
   align-items: center;
-  text-decoration: none;
   justify-content: space-evenly;
 }
 
@@ -848,7 +848,6 @@ main {
 
 #project #prj_content .prj_cont_view button {
   border: .5rem solid var(--co);
-  color: var(--co);
   border-radius: 5rem;
   padding: 1rem;
   font-weight: bolder;
@@ -856,6 +855,10 @@ main {
   margin-left: 4rem;
 }
 
+#project #prj_content .prj_cont_view button a{
+  color: black;
+
+}
 #project #prj_content .prj_cont_view button:active {
   box-shadow: none;
   transform: translateX(.3rem) translateY(.3rem);
@@ -986,7 +989,6 @@ form button a,
 form button i {
   color: white;
   font-size: 3.5rem;
-  text-decoration: none;
 }
 
 form button i {
@@ -1014,11 +1016,12 @@ form button:active {
   padding-left: 5rem;
   box-sizing: border-box;
   line-height: 10rem;
-  
 }
 
 #contact p a {
   color: var(--co);
+  text-decoration: underline
+
 }
 
 #contact p a:active {
