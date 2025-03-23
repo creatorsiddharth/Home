@@ -84,7 +84,7 @@ bar.addEventListener('click', () => {
 
 var buttons = Array.from(document.getElementById('ph_button').children);
 var image = document.getElementById('ph1');
-var img_urls = ['/home.jpg']
+var img_urls = ['home.jpg']
 buttons.forEach((e) => {
   e.addEventListener('click', () => {
     
