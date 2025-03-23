@@ -109,7 +109,7 @@ buttons.forEach((e) => {
 })
 
 
-
+buttons[0].click();
 // making photos big on click
 // making photos big on click
 // making photos big on click
