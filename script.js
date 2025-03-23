@@ -84,12 +84,16 @@ bar.addEventListener('click', () => {
 
 var buttons = Array.from(document.getElementById('ph_button').children);
 var image = document.getElementById('ph1');
-
+var img_urls = ['/home.jpg']
 buttons.forEach((e) => {
   e.addEventListener('click', () => {
     
     // adding animation class to photoframe
     image.classList.add('ph_ani')
+    
+    //adding urls to url array to store it 
+    img_urls.shift();
+    img_urls.push(e.value);
     
     // changing photo while animation with delay
     setTimeout(() => {
@@ -106,7 +110,52 @@ buttons.forEach((e) => {
 
 
 
+// making photos big on click
+// making photos big on click
+// making photos big on click
 
+
+var big_img = document.getElementById('ph_big')
+var big_img_container = document.getElementById('img_big_container')
+
+image.addEventListener('click', () => {
+  
+  big_img.setAttribute('src', img_urls[0]);
+  big_img_container.style.display = 'grid';
+  
+  
+  //Adding title on big photos
+  if (img_urls[0] == 'home.jpg' || img_urls[0] == '/home.jpg') {
+    document.getElementById('big_img_name').innerText = 'Trio with their Mother';
+  }
+  else if (img_urls[0] == '/e.jpg' || img_urls[0] == 'e.jpg') {
+    document.getElementById('big_img_name').innerText = 'Sandeep, Siddharth, Bharti';
+  }
+  else if (img_urls[0] == '/e1.jpg' || img_urls[0] == 'e1.jpg') {
+    document.getElementById('big_img_name').innerText = 'My mother & me';
+  }
+  else if (img_urls[0] == '/trio.jpg' || img_urls[0] == 'trio.jpg') {
+    document.getElementById('big_img_name').innerText = 'Trio: Bharti, Yash, Siddharth';
+  }
+  else {
+    document.getElementById('big_img_name').innerText = 'The Real Gods.';
+  }
+  
+})
+
+
+
+// Removing big photos on body click
+// Removing big photos on body click
+// Removing big photos on body click
+
+
+
+big_img_container.addEventListener('click', () => {
+  big_img.removeAttribute('src');
+  big_img_container.style.display = 'none'
+  
+})
 
 
 
@@ -185,12 +234,12 @@ var sentbutton = document.querySelector('form button a');
 var forminputs = Array.from(document.getElementsByClassName('fo_input'));
 forminputs.forEach((e) => {
   e.addEventListener('change', () => {
-    if (forminputs[0].value.trim()!='' && forminputs[1].value.trim()!='' && forminputs[3].value.trim()!='' && forminputs[4].value.trim()!='') {
+    if (forminputs[0].value.trim() != '' && forminputs[1].value.trim() != '' && forminputs[3].value.trim() != '' && forminputs[4].value.trim() != '') {
       sentbutton.setAttribute('href', 'mailto:herosiddharthspck@gmail.com?subject=' + forminputs[3].value + '&body=' + '*NAME:  ' + forminputs[0].value + '%0D%0A%0D%0A' + '*CONTACT NO:  ' + forminputs[1].value + '%0D%0A%0D%0A' + '*EMAIL ID: ' + forminputs[2].value + '%0D%0A%0D%0A' + '*MESSAGE: ' + forminputs[4].value + '%0D%0A%0D%0A.%0D%0A **THIS IS VIA HOMEPAGE--Sid--GITHUB**')
     }
-        else{
-          sentbutton.removeAttribute('href')
-        }
+    else {
+      sentbutton.removeAttribute('href')
+    }
     
   })
 })

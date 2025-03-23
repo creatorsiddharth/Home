@@ -21,7 +21,7 @@ body {
   width: 100vw;
 }
 
-a{
+a {
   text-decoration: none
 }
 
@@ -524,7 +524,8 @@ main {
   border-radius: 2rem
 }
 
-#photo #ph1 {
+#photo #ph1,
+#ph_big {
   display: block;
   height: 30vh;
   width: 70%;
@@ -533,6 +534,33 @@ main {
   background-size: cover;
   box-shadow: inset 0px 0px 1rem .5rem black;
   border: 2rem groove var(--co);
+}
+
+#img_big_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  place-items: center;
+  backdrop-filter: blur(5);
+  background: #42445A94;
+  backdrop-filter: blur(14px);
+  display: none;
+}
+
+#ph_big {
+  width: 100%;
+  height: auto;
+}
+
+#big_img_name {
+  position: fixed;
+  top: 10rem;
+  font-size: 7rem;
+  color: white;
+  font-family: cursive;
 }
 
 .ph_ani {
@@ -855,10 +883,11 @@ main {
   margin-left: 4rem;
 }
 
-#project #prj_content .prj_cont_view button a{
+#project #prj_content .prj_cont_view button a {
   color: black;
-
+  
 }
+
 #project #prj_content .prj_cont_view button:active {
   box-shadow: none;
   transform: translateX(.3rem) translateY(.3rem);
@@ -963,7 +992,8 @@ form textarea {
   outline: none;
 }
 
-form input:focus, form textarea:focus{
+form input:focus,
+form textarea:focus {
   background: #4545454A;
   color: var(--co)
 }
@@ -1021,7 +1051,6 @@ form button:active {
 #contact p a {
   color: var(--co);
   text-decoration: underline
-
 }
 
 #contact p a:active {
