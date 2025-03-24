@@ -110,6 +110,9 @@ buttons.forEach((e) => {
 
 
 buttons[0].click();
+
+
+
 // making photos big on click
 // making photos big on click
 // making photos big on click
@@ -239,6 +242,33 @@ forminputs.forEach((e) => {
     }
     else {
       sentbutton.removeAttribute('href')
+    }
+    
+  })
+})
+
+
+
+
+// Making projects preview active
+// Making projects preview active
+// Making projects preview active
+
+
+
+var preview_buttons = Array.from(document.getElementsByClassName('preview'));
+
+preview_buttons.forEach((e) => {
+  e.addEventListener('click', () => {
+    
+    if (e.innerText == 'Preview Project') {
+      let preview_page = document.getElementById(e.value);
+      preview_page.classList.add('prj_cont_view_active');
+      e.innerText = ' 🔙 Go Back 🔙';
+    } else {
+      let preview_page = document.getElementById(e.value);
+      preview_page.classList.remove('prj_cont_view_active');
+      e.innerText = 'Preview Project';
     }
     
   })

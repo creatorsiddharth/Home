@@ -19,6 +19,7 @@ html {
 
 body {
   width: 100vw;
+  background: white;
 }
 
 a {
@@ -617,7 +618,7 @@ main {
 
 
 #channel {
-  height: 50vh;
+  height: 55vh;
   display: flex;
   box-shadow: inset 0px 0px 2rem 1rem black;
   width: 100%;
@@ -726,7 +727,7 @@ main {
 }
 
 #channel #ch_content {
-  height: 25vh;
+  height: 28vh;
   padding: 2rem;
   font-weight: bolder;
   box-sizing: border-box;
@@ -885,7 +886,6 @@ main {
 
 #project #prj_content .prj_cont_view button a {
   color: black;
-  
 }
 
 #project #prj_content .prj_cont_view button:active {
@@ -893,6 +893,66 @@ main {
   transform: translateX(.3rem) translateY(.3rem);
 }
 
+
+
+
+#project #prj_content .prj_cont_view .preview_helper {
+  display: none;
+}
+
+#project #prj_content .prj_cont_view_active {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  border-radius: 0;
+  left: 0;
+  background: back;
+  font-size: 3.5rem;
+  height: 100vh;
+  width: 100vw;
+  background: #3C3C43;
+  transform: none;
+  box-sizing: border-box;
+}
+
+#project #prj_content .prj_cont_view_active::after {
+  top: 1rem;
+  transform: scale(1.2)
+}
+
+#project #prj_content .prj_cont_view_active .preview_helper {
+  display: block;
+  /*  text-shadow: 0px 0px .5rem white, 0px 0px 2rem white;*/
+  
+}
+
+#project #prj_content .prj_cont_view_active>span {
+  font-size: 5rem
+}
+
+#project #prj_content .prj_cont_view_active p {
+  text-align: left;
+  margin-top: 3rem;
+  /* text-shadow: 0px 0px 1rem white, 0px 0px 2rem white;*/
+  font-size: 3.5rem;
+}
+
+#project #prj_content .prj_cont_view_active .preview_window {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(.5);
+  top: 19vh;
+  left: 0;
+  border: 1rem dotted var(--co);
+  
+}
+
+#project #prj_content .prj_cont_view_active button {
+  box-shadow: .4rem .4rem 1.5rem white;
+  transform: scale(1.3);
+  margin-left: 8rem;
+}
 
 #prj_short {
   position: fixed;
@@ -952,6 +1012,7 @@ main {
     
   }
 }
+
 
 
 
