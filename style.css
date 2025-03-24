@@ -944,7 +944,7 @@ main {
   transform: scale(.5);
   top: 19vh;
   left: 0;
-  border: 1rem dotted var(--co);
+  border: 2rem dotted var(--co);
   
 }
 
