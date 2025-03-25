@@ -260,7 +260,7 @@ var preview_buttons = Array.from(document.getElementsByClassName('preview'));
 
 preview_buttons.forEach((e) => {
   e.addEventListener('click', () => {
-    
+    console.log('ju')
     if (e.innerText == 'Preview Project') {
       let preview_page = document.getElementById(e.value);
       preview_page.classList.add('prj_cont_view_active');

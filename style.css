@@ -878,6 +878,7 @@ main {
 #project #prj_content .prj_cont_view button {
   border: .5rem solid var(--co);
   border-radius: 5rem;
+  font-size: 3rem;
   padding: 1rem;
   font-weight: bolder;
   box-shadow: .4rem .4rem 1.5rem black;
