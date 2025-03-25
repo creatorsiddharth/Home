@@ -879,14 +879,20 @@ main {
   border: .5rem solid var(--co);
   border-radius: 5rem;
   font-size: 3rem;
-  padding: 1rem;
   font-weight: bolder;
   box-shadow: .4rem .4rem 1.5rem black;
   margin-left: 4rem;
 }
 
+
+#project #prj_content .prj_cont_view button.preview{
+    padding: 1rem;
+}
+
 #project #prj_content .prj_cont_view button a {
   color: black;
+  padding: 1rem;
+display: inline-block;
 }
 
 #project #prj_content .prj_cont_view button:active {
