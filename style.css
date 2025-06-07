@@ -845,7 +845,7 @@ main {
 }
 
 #project #prj_content #clock_web::after {
-  content: "⏰"
+  content: "🐍";
 }
 
 #project #prj_content #calculator_web::after {
