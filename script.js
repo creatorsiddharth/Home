@@ -273,3 +273,26 @@ preview_buttons.forEach((e) => {
     
   })
 })
+/*
+let waste_bu = document.getElementsByClassName('unavailable');
+
+waste_bu = Array.from(waste_bu)
+waste_bu.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    let info_box = document.createElement('div');
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    //info_box.classList.add('info_box');
+    p1.innerText='Alert!'
+    p1.classList.add('p1')
+
+    p2.classList.add('p2')
+    p2.innerText='i'
+
+    info_box.appendChild(p1);
+    info_box.appendChild(p2);
+
+    document.querySelector('body').appendChild(info_box)
+    console.log(info_box)
+  })
+})*/
