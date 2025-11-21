@@ -875,6 +875,16 @@ main {
   font-size: 3.5rem;
 }
 
+#project #prj_content .prj_cont_view #button_bar{
+  display: flex;
+  width: 100%;
+  height: 40%;
+  position: relative;
+  background: teal;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
 /*
 #project #prj_content .prj_cont_view button {
   border: .5rem solid var(--co);
@@ -901,6 +911,7 @@ font-size: 3rem;
 font-weight: bolder;
 box-shadow: .4rem .4rem 1.5rem black;
 margin-left: 4rem;
+text-align: center;
 }
 
 #project #prj_content .prj_cont_view button:active , #project #prj_content .prj_cont_view  a:active{
@@ -930,6 +941,9 @@ margin-left: 4rem;
   box-sizing: border-box;
 }
 
+#project #prj_content .prj_cont_view_active #button_bar {
+  height: 8%;
+}
 #project #prj_content .prj_cont_view_active::after {
   top: 1rem;
   transform: scale(1.2)
