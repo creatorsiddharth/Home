@@ -140,6 +140,11 @@ image.addEventListener('click', () => {
   else if (img_urls[0] == '/trio.jpg' || img_urls[0] == 'trio.jpg') {
     document.getElementById('big_img_name').innerText = 'Trio: Bharti, Yash, Siddharth';
   }
+  
+    else if (img_urls[0] == '/f1.jpg' || img_urls[0] == 'f1.jpg') {
+    document.getElementById('big_img_name').innerText = 'BHAI:😈';
+  }
+
   else {
     document.getElementById('big_img_name').innerText = 'The Real Gods.';
   }
