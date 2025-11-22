@@ -214,7 +214,7 @@ var footer_ = document.querySelector('footer')
 var back_gal_but = document.getElementById('back_home')
 
 gallery_button.addEventListener('click', () => {
-  gallery.style.display = 'block';
+  gallery.style.transform = 'scale(1)';
  main_.style.display = 'none';
 footer_.style.display = 'none';
  header_.style.display = 'none'
@@ -227,9 +227,9 @@ footer_.style.display = 'none';
 
 
 back_gal_but.addEventListener('click', () => {
-  gallery.style.display = 'none';
+  gallery.style.transform = 'scale(0.0)';
  main_.style.display = 'flex';
-footer_.style.display = '';
+footer_.style.display = 'block';
  header_.style.display = 'flex'
   
 })

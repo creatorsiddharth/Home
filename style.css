@@ -641,7 +641,8 @@ main {
 /*Galery code*/
 
 #photo_gallery {
-  display: none;
+  display: block;
+  transform: scale(0.0);
   position: absolute;
   top: 0;
   left: 0;
