@@ -642,7 +642,7 @@ main {
 
 #photo_gallery {
   display: block;
-  transform: scale(0.1);
+  transform: scale(0.0);
   position: absolute;
   top: 0;
   left: 0;
