@@ -16,7 +16,7 @@ chatgpt code  gallery
        */
   const items = [
     // Example items (replace src values with your files)
-    { type: 'image', src: '/gallery images/p1.jpg', alt: 'Photo 1' },
+    { type: 'image', src: 'face.png', alt: 'Photo 1' },
     { type: 'image', src: '/gallery images/p2.jpg', alt: 'Photo 2' },
     { type: 'video', src: '/gallery images/c1.mp4', alt: 'Clip 1' },
     { type: 'image', src: '/gallery images/p3.jpg', alt: 'Photo 3' },
