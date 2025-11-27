@@ -1,7 +1,5 @@
 /**** **********
 **********
-chatgpt code gallery 
-chatgpt code  gallery 
 
 **********
 ******************/
